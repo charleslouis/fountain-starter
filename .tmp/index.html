@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+  <head>
+    <base href="/">
+    <meta charset="utf-8">
+    <title>AXA Simulateur de retraite</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" type="image/png" href="http://fountainjs.io/assets/imgs/fountain.png" />
+  </head>
+
+  <body ng-app="app" ng-class="{'modal-open': $root.simulator.modalOpen===true}">
+    <div class="main-container">
+      <main class="main">  
+        <ui-view></ui-view>
+        <div ui-view="aboveSimulator"></div>
+        <div ui-view="simulator"></div>
+        <div ui-view="belowSimulator"></div>
+      </main>
+      
+    </div>
+    
+    <script src="https://use.typekit.net/dzq8bug.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    
+  <script type="text/javascript" src="index.js"></script></body>
+</html>

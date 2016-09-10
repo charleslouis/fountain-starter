@@ -1,0 +1,135 @@
+.btn{
+	transition: all 0.3s ease;
+	position: relative;
+	
+	&.btn-double-line{
+		line-height: 1.33;
+	}
+}
+
+
+.btn-sim-primary,
+.btn-sim-secondary {
+	font-size: 0.85em;
+	margin-top: 2em;
+	padding: 0.75em 3em;
+	line-height: 2;
+	letter-spacing: 1px;
+	box-shadow: 0 10px 15px 0 rgba(0,0,0,0.25);
+	color: $white;
+	font-family: $font-family-buttons;
+
+	&:hover,
+	&:focus{
+		color: $white;
+		opacity: 0.8;
+	}
+}
+
+.btn-sim-primary {
+	background-color: $orange-bg;
+}
+
+.btn-sim-secondary {
+	background-color: $blue-font;
+}
+
+.btn-sim-outline{
+	font-size: 0.85em;
+	margin-top: 2em;
+	padding: 0.75em 3em;
+	line-height: 2;
+	letter-spacing: 1px;
+}
+
+.btn-sim-primary-outline{
+	@extend .btn-sim-outline;
+	background: transparent;
+	color: $orange-bg;
+	border: solid $orange-bg 1px;
+
+	&:hover,
+	&:focus{
+		background-color: $orange-bg;
+		color: $white;
+	}
+}
+
+.btn-sim-secondary-outline{
+	@extend .btn-sim-outline;
+	background: transparent;
+	color: $blue-font;
+	border: solid $blue-font 1px;
+
+	&:hover,
+	&:focus{
+		background-color: $blue-font;
+		color: $white;
+	}
+}
+
+
+.btn-uppercase{
+	text-transform: uppercase;
+}
+
+
+.btn-fat{
+	@extend .btn-uppercase;
+	font-weight: bold;
+	letter-spacing: 0;
+	font-size: 1.5em;
+	line-height: 1.2;
+	padding: 0.75em 4em 0.75em 2em;
+}
+
+.btn-chevron{
+	@extend .btn-uppercase;
+	@extend .btn-sim-primary;
+	@extend .btn-fat;	
+
+	$chevron-size: 1.33em;
+	&:after{
+		position: absolute;
+		display: block;
+		top: 50%;
+		right: 10%;
+		height: $chevron-size;
+		width: $chevron-size;
+		margin-top: -($chevron-size/2);
+		content: "";
+		background-image: url("/app/assets/img/misc/chevron-droite.svg");
+		background-position: center center;
+		-webkit-background-size: contain;
+		-moz-background-size: contain;
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+}
+
+
+.btn--hero{
+	@extend .btn-uppercase;
+	@extend .btn-sim-primary;
+	@extend .btn-fat;
+	@extend .btn-chevron ;
+	padding: 0.75em 2.5em 0.75em 1.5em; 
+	// float: right;
+	width: 100%;
+}
+
+.btn-right{
+	float: left;
+}
+
+.btn-left{
+	float: right;
+}
+
+.row.btn-group{
+	margin-top: 2em;
+
+	.btn{
+		width: 300px;
+	}
+}

@@ -1,0 +1,72 @@
+---
+# You can use comments here
+bootstrapVersion: 3
+loglevel: debug
+
+useFlexbox: true
+
+styleLoaders:
+  - style
+  - css
+  - sass
+  - sass?outputStyle=expanded
+
+styles:
+  # Core variables and mixins
+  variables: true
+  mixins: true
+
+  # Reset and dependencies
+  normalize: true
+  print: true
+  glyphicons: false
+
+  # Core CSS
+  scaffolding: true
+  type: true
+  code: false
+  grid: true
+  tables: false
+  forms: true
+  buttons: true
+
+  # Components
+  component-animations: false
+  dropdowns: false
+  button-groups: false
+  input-groups: false
+  navs: false
+  navbar: false
+  breadcrumbs: false
+  pagination: true
+  pager: false
+  labels: true
+  badges: true
+  jumbotron: false
+  thumbnails: false
+  alerts: false
+  progress-bars: false
+  media: false
+  list-group: false
+  panels: true
+  responsive-embed: true
+  wells: true
+  close: true
+
+  # Components w/ JavaScript
+  modals: false
+  tooltip: false
+  popovers: false
+  carousel: false
+
+  # Utility classes
+  utilities: true
+  responsive-utilities: true
+
+bootstrapCustomizations: ./src/app/assets/scss/_variables-custom.scss
+
+appStyles: ./src/app/assets/scss/style.scss
+
+scripts:
+  # alert: true
+  # button: true

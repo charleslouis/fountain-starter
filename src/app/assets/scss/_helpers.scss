@@ -1,0 +1,20 @@
+
+
+/* The Magic Float Center Code */
+.float-center {
+  float: right;
+
+  position: relative;
+  left: -50%; /* or right 50% */
+  text-align: left;
+}
+.float-center > .inner--float-center {
+	@extend .clearfix;
+	position: relative;
+	left: 50%;
+}
+
+.unstyled-list{
+	list-style-type: none;
+	list-style-position: outside;
+}
